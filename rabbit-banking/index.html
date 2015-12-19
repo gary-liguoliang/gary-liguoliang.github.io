@@ -1,0 +1,208 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <title>OCBC 360 / Bank of China SmartSaver Calculator</title>
+</head>
+<body onload="onLoad()">
+<script>
+    function onLoad() {
+        $('#input_salary').val('5000');
+        $('#input_initial_deposit').val('50000');
+    }
+
+    function onCalculate() {
+        calculate();
+    }
+
+    function calculate() {
+        var salary = parseFloat($('#input_salary').val());
+        salary = isNaN(salary) ? 0 : salary;
+        var initial_deposit = parseFloat($('#input_initial_deposit').val());
+        initial_deposit = isNaN(initial_deposit) ? 0 : initial_deposit;
+        var pay_bills = $('#checkbox_bill').prop('checked');
+        var spend_with_card = $('#checkbox_spend').prop('checked');
+        var insure_invest_with_ocbc  = $('#checkbox_insure_invest_ocbc').prop('checked');
+
+        boc_interest = 0;
+        boc_interest_list = calculateInterestForBOCSmartSaver(salary, initial_deposit, pay_bills, spend_with_card);
+        console.log(boc_interest_list);
+        for(var key in boc_interest_list) {
+            boc_interest += boc_interest_list[key];
+        }
+        boc_interest_per_month = boc_interest / 12;
+        $('#boc_interest').html('<strong>' + boc_interest_per_month.toFixed(2) + '</strong>' + listToString(boc_interest_list));
+
+        ocbc_interest = 0;
+        ocbc_interest_list = calculateOCBCInterest(salary, initial_deposit, pay_bills, spend_with_card, insure_invest_with_ocbc);
+        console.log(ocbc_interest_list);
+        for(var key in ocbc_interest_list) {
+            ocbc_interest += ocbc_interest_list[key];
+        }
+        ocbc_interest_per_month = ocbc_interest / 12;
+        $('#ocbc_interest').html('<strong>' + ocbc_interest_per_month.toFixed(2) + '</strong>'+ listToString(ocbc_interest_list));
+    }
+
+    function calculateInterestForBOCSmartSaver(salary, initial_deposit, pay_bills, spend_with_card) {
+        var interest_list = {};
+        var interest = 0;
+        var total_amount = salary + initial_deposit;
+        interest += total_amount * getPrevailingRate(initial_deposit + salary);
+
+        interest_list["prevailing-interest"] = total_amount * getPrevailingRate(initial_deposit + salary);
+
+        if(salary >= 2000) {
+            interest += total_amount * 1 / 100;
+            interest_list["salary-credit-bonus"] = total_amount * 1 / 100;
+        }
+
+        if(pay_bills) {
+            interest += total_amount * 0.6 / 100;
+            interest_list["bill-payment-bonus"] = total_amount * 0.6 / 100;
+        }
+
+        if(spend_with_card) {
+            interest += total_amount * 1.55 / 100;
+            interest_list["credit-card-spend-bonus"] = total_amount * 1.55 / 100;
+        }
+
+        return interest_list;
+    }
+
+    function getPrevailingRate(amount) {
+        if(amount < 5000) {
+            return 0.25 / 100;
+        } else if(amount < 20000) {
+            return 0.275 / 100;
+        } else if(amount < 50000) {
+            return 0.35 / 100;
+        } else {
+            return 0.4 / 100;
+        }
+    }
+
+    function calculateOCBCInterest(salary, initial_deposit, pay_bills, spend_with_card, insure_invest_with_ocbc) {
+        total_amount = salary + initial_deposit;
+
+        interest_list = {};
+
+        if(salary >= 2000) {
+            interest_list["salary-credit-bonus"] = total_amount * 1.2 / 100;
+        }
+
+        if(pay_bills) {
+            interest_list["bill-payment-bonus"] = total_amount * 0.5 / 100;
+        }
+
+        if(spend_with_card) {
+            interest_list["credit-card-spend-bonus"] = total_amount * 0.5 / 100;
+        }
+
+        if(insure_invest_with_ocbc) {
+            interest_list["wealth-bonus"] = total_amount * 1 / 100;
+        }
+
+        interest_list["increment-bonus"] = salary * 1 / 100;
+
+        return interest_list;
+    }
+
+    function listToString(list) {
+        var str = '<span style="font-size=10px">';
+
+        for(var key in list) {
+            str += "<br />" + key;
+            str += ": " + (list[key] / 12).toFixed(2);
+        }
+
+        return str + "</span>";
+    }
+
+</script>
+
+<div class="container">
+
+    <div class="input-group col-lg-5 checkbox">
+        <div class="input-group-addon">Your Salary:&nbsp;	&nbsp; S$</div>
+        <input type="text" class="form-control" id="input_salary" placeholder="Credit a minimum salary of S$2,000">
+    </div>
+
+    <div class="input-group col-lg-5 checkbox">
+        <div class="input-group-addon">Initial Deposit: S$</div>
+        <input type="text" class="form-control" id="input_initial_deposit" placeholder="Initial deposit">
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="payment" id="checkbox_bill">
+            Make 3 unique bill payments
+        </label>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="spend" id="checkbox_spend">
+            Spend at least S$500 in total
+        </label>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="insure_invest_ocbc" id="checkbox_insure_invest_ocbc">
+
+            Insure or invest with OCBC?
+        </label>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="onCalculate()">Calculate</button>
+</div>
+
+<div class="container" id="result">
+
+    <table class="table" style="padding-top: 20px; font-size: 12px">
+        <thead>
+            <tr>
+                <th>Plan</th>
+                <th>Interest per Month (S$)</th>
+            </tr>
+        </thead>
+        <tbod>
+            <tr>
+                <td style="font-weight: bold">
+                    <a href="http://www.bankofchina.com/sg/pbservice/pb1/201510/t20151023_5857863.html">Bank of China - SmartSaver</a>
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </td>
+                <td id="boc_interest"></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">
+                    <a href="http://www.ocbc.com/personal-banking/accounts/360-account.html"> OCBC - 360 </a>
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </td>
+                <td id="ocbc_interest"></td>
+            </tr>
+        </tbod>
+    </table>
+
+</div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71253977-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>
