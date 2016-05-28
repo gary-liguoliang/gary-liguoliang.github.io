@@ -68,7 +68,21 @@
     <div class="panel panel-default">
         <div class="panel-heading"><span class="badge">3</span> Ready to use!</div>
         <div class="panel-body">
+            as appliction:
             <pre class="prettyprint" lang-bash>rabbit-backup.py -r /test -d 1 /tmp/test.txt</pre>
+            as API:
+            <pre class="prettyprint" lang-python>
+import logging
+from rabbit_backup.rabbit_dropbox import BackupJob
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+
+    access_token = 'DropBox token'
+
+    rabbit_dropbox_job = BackupJob(access_token, 'test', 5)
+    rabbit_dropbox_job.backup_and_clear_history_data(['/tmp/test'])
+</pre>
         </div>
     </div>
 </div>
