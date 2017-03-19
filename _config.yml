@@ -31,3 +31,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 timezone: Asia/Singapore
+
+disqus:
+  shortname: guoliang
+
+google_analytics: UA-71253977-1
