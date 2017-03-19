@@ -40,7 +40,8 @@ tags:
  - 启动一个Ubuntu 14
  - 设置port forwarding
  - 安装Ruby,Jekyll
- vagrant up之后就可以用Jekyll跑本地的网站了 
+ 
+ `vagrant up`之后就可以用Jekyll跑本地的网站了 
 
 ### 迁移过程
  - WordPress迁移到子域名;
