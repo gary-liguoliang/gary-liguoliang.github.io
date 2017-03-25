@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setup your local Jekyll environment in 10 minutes using Vagrant + VirtualBox"
+title:  "Setup local Jekyll environment in 10 minutes using Vagrant + VirtualBox"
 date:   2017-03-25 17:00:00 +0800
 categories: blogging
 tags: 
