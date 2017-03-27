@@ -14,8 +14,9 @@
                         {{ site.title | escape }}
                         {% endif %}
                     </li>-->
+                    <li>{{ site.description | escape }}</li>
                     {% if site.email %}
-                    <li><a href="https://www.linkedin.com/in/guoliang/" target="_blank">linkedin</a></li>
+
                     <li>{{ site.email }}</li>
                     {% endif %}
                 </ul>
@@ -34,11 +35,12 @@
                         {% include icon-twitter.html username=site.twitter_username %}
                     </li>
                     {% endif %}
+                    <li><a href="https://www.linkedin.com/in/guoliang/" target="_blank">linkedin</a></li>
                 </ul>
             </div>
 
             <div class="footer-col footer-col-3">
-                <p>{{ site.description | escape }}</p>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
             </div>
         </div>
 
