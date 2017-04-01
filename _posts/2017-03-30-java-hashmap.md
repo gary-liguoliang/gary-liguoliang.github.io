@@ -16,10 +16,10 @@ they are transformed into bins of `TreeNodes`. a typical HashMap looks like:
 ![HashMap](https://raw.githubusercontent.com/guoliang-dev/guoliang-dev.github.io/master/resources/java-hashmap.PNG)
 
 ### the hash table
-the `table` acts the index, initialized on first use, e.g. `put(key, value)`. 
+the `table` acts as the index, initialized on first use, e.g. `put(key, value)`. the default capacity is `16`.
 
 let's say we initialized a map: `Map<User, String> map = new HashMap<>()`, and now we want to `map.put(user1, "emai-add")`
-first thing for a `put` is to identify the location in the `table`. the default capacity is `16`, which cell should we put the `key-value` pair? 
+first thing for a `put` is to identify the location in the `table`.  which cell should we put the `Node<key, value>`? 
 
 ### identify index in the hash table
 ```java
@@ -27,6 +27,8 @@ first thing for a `put` is to identify the location in the `table`. the default 
 hash = (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16)
 index = (table.length - 1) & hash
 ```
+the `index` is calculated from the `key.hashCode()`, and the table `length`. `h >>> 6` spreads higher bits of has to lower: 
+> the table uses power-of-two masking, sets of hashes that vary only in bits above the current mask will always collide
 
 ![HashMap-identify-index](https://raw.githubusercontent.com/guoliang-dev/guoliang-dev.github.io/master/resources/java-hashmap-identify-index.PNG)
 
@@ -38,7 +40,7 @@ if the cell `table[index]` is empty, we can directly put a `Node(key, value)`, e
 table[index] = newNode(hash, key, value, null);
 ```
 
-if the cell alreay occupied, check the nodes and update/insert new node:
+if the cell already occupied, check the nodes and update/insert new node:
 
 ```java
 p = table[index]
@@ -69,9 +71,16 @@ if (e != null) { // existing mapping for key
     afterNodeAccess(e);
     return oldValue;
 }
+
+if (++size > threshold)
+    resize();
+
 ```
 
-the key-value pair `<user1, "eamil-add">` is registered on the hash table now. 
+the key-value pair `Node<user1, "eamil-add">` is attached on the hash table now. 
+
+at the end of `put` method, `HashMap` will check whether it needs a `resize()` 
+
 
 ### resize if necessary
 
@@ -80,10 +89,6 @@ power-of-two expansion, elements from each bin must either stay at same index, o
 ![HashMap-resize](https://raw.githubusercontent.com/guoliang-dev/guoliang-dev.github.io/master/resources/java-hashmap-resize.PNG)
 
 ```java
-if (++size > threshold)
-    resize();
-
-
 @SuppressWarnings({"rawtypes","unchecked"})
     Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
 table = newTab;
