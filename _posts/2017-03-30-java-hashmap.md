@@ -7,16 +7,18 @@ tags:
  - java
 ---
 
+How many times have been asked this question in your job interview? for me, more than 10.  I want to be crystal clear about this question to save everyone's time. 
 
 ## How HashMap works in Java? 
 
-`HashMap` is a `key-value` pair container based on hash table. a typical HashMap looks like:
+`HashMap` is a `key-value` pair container based on hash table. it usually acts as a binned(bucketed) hash table, but when bins get too large, 
+they are transformed into bins of `TreeNodes`. a typical HashMap looks like:
 ![HashMap](https://raw.githubusercontent.com/guoliang-dev/guoliang-dev.github.io/master/resources/java-hashmap.PNG)
 
 ### the hash table
 the `table` acts the index, initialized on first use, e.g. `put(key, value)`. 
 
-let's say we created a map: `Map<User, String> map = new HashMap<>()`, and now we want to `map.put(user1, "emai-add")`
+let's say we initialized a map: `Map<User, String> map = new HashMap<>()`, and now we want to `map.put(user1, "emai-add")`
 first thing for a `put` is to identify the location in the `table`. the default capacity is `16`, which cell should we put the `key-value` pair? 
 
 ### identify index in the hash table
