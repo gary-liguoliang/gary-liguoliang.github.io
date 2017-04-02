@@ -5,45 +5,33 @@
         <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
         <div class="footer-col-wrapper">
-            <div class="footer-col footer-col-1">
+            <div class="footer-col footer-col-3">
+
+                <span>
+                    <a target="_blank" href="https://github.com/guoliang-dev"><img src="/resources/icons/github.svg" /></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/guoliang"><img src="/resources/icons/linkedin.svg" /></a>
+                </span>
+
                 <ul class="contact-list">
-                    <!--<li>
-                        {% if site.author %}
-                        {{ site.author | escape }}
-                        {% else %}
-                        {{ site.title | escape }}
-                        {% endif %}
-                    </li>-->
                     <li>{{ site.description | escape }}</li>
                     {% if site.email %}
 
                     <li>{{ site.email }}</li>
                     {% endif %}
-                </ul>
-            </div>
 
-            <div class="footer-col footer-col-2">
-                <ul class="social-media-list">
-                    {% if site.github_username %}
-                    <li>
-                        {% include icon-github.html username=site.github_username %}
-                    </li>
-                    {% endif %}
-
-                    {% if site.twitter_username %}
-                    <li>
-                        {% include icon-twitter.html username=site.twitter_username %}
-                    </li>
-                    {% endif %}
-                    <li><a href="https://www.linkedin.com/in/guoliang/" target="_blank">linkedin</a></li>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
                 </ul>
             </div>
 
             <div class="footer-col footer-col-3">
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+                Subscribe via / 订阅更新:
+                <ul class="contact-list">
+                    <li><a target="_blank" href="https://liguoliang.com/feed/"><img src="/resources/icons/rss.svg" /> RSS feed </a></li>
+                    <li><a target="_blank" href="https://twitter.com/liguoliang"><img src="/resources/icons/twitter.svg" /> Twitter </a></li>
+                    <li><a target="_blank" href="http://weibo.com/52251985"><img src="/resources/icons/sinaweibo.svg" /> 新浪微博 </a></li>
+                </ul>
             </div>
         </div>
-
     </div>
 
 </footer>
