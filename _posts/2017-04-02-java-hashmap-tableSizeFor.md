@@ -13,7 +13,7 @@ tags:
 
 ### 解决思路: 
 
-1. 循环, 直到找到下一个2的冥次方
+1. **循环, 直到找到下一个2的冥次方**
 
 ```java
 for each int from i to MAX: 
@@ -27,7 +27,7 @@ public boolean isPowerOfTwo_1(int n) {
 }
 ```
 
-2. 使用Bitwise操作
+2. **使用Bitwise操作**
 
 如果n是2的冥, 二进制表示会是这样:
 ```
