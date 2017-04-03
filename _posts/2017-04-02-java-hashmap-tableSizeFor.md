@@ -58,3 +58,6 @@ static final int tableSizeFor(int cap) {
 
  - 一开始的`n = cap - 1`操作是为了应对`cap`已经是2次冥的情况, 这样就可以统一处理;
  - 注意边界值:如果输入为0, Bitwise操作结束后, `n = -1`
+ 
+ 在`HashMap`中, `tableSizeFor()`用于根据传入的`initialCapacity`计算`capacity`. 
+ 如 `map = HashMap(initialCapacity=20, loadFactor=0.8f)`, `capacity`将会在`resize()`时被设置为`tableSizeFor(20)`的结果, `32`.
