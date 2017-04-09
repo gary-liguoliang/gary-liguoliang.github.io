@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+  
+
+    <!-- AddToAny BEGIN -->
+    <div class="a2a_kit a2a_kit_size_16 a2a_default_style">
+        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_wechat"></a>
+        <a class="a2a_button_sina_weibo"></a>
+        <a class="a2a_button_douban"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_linkedin"></a>
+        <a class="a2a_button_google_plus"></a>
+        <a class="a2a_button_instapaper"></a>
+    </div>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <!-- AddToAny END -->
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  
+
+    <!-- AddToAny BEGIN -->
+    <div class="a2a_kit a2a_kit_size_16 a2a_default_style">
+        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_wechat"></a>
+        <a class="a2a_button_sina_weibo"></a>
+        <a class="a2a_button_douban"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_linkedin"></a>
+        <a class="a2a_button_google_plus"></a>
+        <a class="a2a_button_instapaper"></a>
+    </div>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <!-- AddToAny END -->
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
