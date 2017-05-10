@@ -6,7 +6,13 @@ title:  "IntelliJ: How to support customized Cucumber feature file extension"
 ## Requirement
 as a heavy user of Cucumber, I created customized feature file (e.g. .feature2) for my enhancment. I want to add support to customized feature file with IntelliJ and Cucumber plugin.
 
-## Solution
+## Solutions
+
+### Solution 1: configuring IntellJ
+config IntelliJ:
+`Settings > File Types`, register customized patterns: e.g. `*.feature2`
+
+### Solution 2: customizing cucumber plugin
 
 the [IntelliJ Cucumber plugin](https://github.com/JetBrains/intellij-plugins/tree/master/cucumber) is created by JetBrains with '[Apache License 2.0](https://github.com/JetBrains/intellij-plugins/blob/master/cucumber/LICENSE.txt)'
 
