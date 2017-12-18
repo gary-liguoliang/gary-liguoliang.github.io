@@ -5,12 +5,12 @@ title:  "Newborn log 新生儿日志"
 
 ## 孕期
 
-Feb 01, 2017 | 青岛流亭机场
+**Feb 01, 2017 | 青岛流亭机场**
 
 年后返城.
 
 
-Feb 02, 2017 | East Coast Clinic & Surgery For Women  
+**Feb 02, 2017 | East Coast Clinic & Surgery For Women**
 
 第一次去诊所, 医生兴奋的对着屏幕给我们比划宝宝的位置, 第一次听到宝宝突突突的心跳, 泪眼摩梭, 但我还是没看懂宝宝的位置. 
 之后每个月都会继续来做产检.
