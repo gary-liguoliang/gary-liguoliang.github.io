@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Newborn log 新生儿日志"
+title:  "newborn log 新生儿日志"
 ---
 
 ## 孕期
