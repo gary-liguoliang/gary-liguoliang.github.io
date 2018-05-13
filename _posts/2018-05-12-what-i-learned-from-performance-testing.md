@@ -12,7 +12,7 @@ I recently joined a new team as a do-everything engineer. The team is working ha
 After spending couple weeks with an existing 'Performance testing' team, I finally get the test 'approved'. I learned couple things from this process. 
  
 
-## if downstream services are not available for testing, mock it. 
+## if downstream service is not available for testing, mock it. 
 
 or else the performance test won't happen at all. given the following diagram, it's almost impossible to get all dependencies ready for my testing, e.g:
  - UserService has a testing envrionment, but it took days to request a test user. 
