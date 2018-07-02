@@ -140,6 +140,26 @@ export default Route.extend({
 
 ```
 
+## stop rendering parents outlet
+
+> Each template will be rendered into the {{outlet}} of its parent route's template. 
+> https://guides.emberjs.com/release/routing/rendering-a-template/
+
+we don't really need to display the projects list in `projects/view`, so:
+https://stackoverflow.com/questions/32160056/ember-how-not-to-render-parents-template
+
+```
+ember generate route projects/index
+
+// migrate code from projects.js/projects.hbs to projects/index.js(.hbs)
+```
+
+## add bootstrap
+
+```
+ember install ember-bootstrap
+// then restart ember server
+```
 
 
 
