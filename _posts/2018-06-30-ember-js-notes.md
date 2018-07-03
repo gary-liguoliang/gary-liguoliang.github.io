@@ -161,6 +161,16 @@ ember install ember-bootstrap
 // then restart ember server
 ```
 
+## add static file
+
+```
+mkdir public/assets
+vi public/assets/data/projects.json
+
+// use in js:
+ // return $.getJSON("https://api.github.com/orgs/python/repos");
+  return $.getJSON("/assets/data/projects.json");
+```
 
 
 
