@@ -39,6 +39,7 @@ e.g.
 
 based on the following check:
 ```javascript
+const semver = require('semver')
 > semver.gt('1.1.1-rc.1', '1.1.0')
 true
 > semver.gt('1.1.2-rc.1', '1.1.1-rc.1')
