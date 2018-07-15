@@ -69,6 +69,7 @@ I would assume that given a list of versions:
 **possiable to get the latest pre release based on a versin range?**
 the answer is No.
 
+https://docs.npmjs.com/misc/semver#prerelease-tags
 > If a version has a prerelease tag (for example, 1.2.3-alpha.3) then it will only be allowed to satisfy comparator sets if at least one comparator with the same [major, minor, patch] tuple also has a prerelease tag.
 
 > For example, the range >1.2.3-alpha.3 would be allowed to match the version 1.2.3-alpha.7, but it would not be satisfied by 3.4.5-alpha.9, even though 3.4.5-alpha.9 is technically "greater than" 1.2.3-alpha.3 according to the SemVer sort rules. The version range only accepts prerelease tags on the 1.2.3 version. The version 3.4.5 would satisfy the range, because it does not have a prerelease flag, and 3.4.5 is greater than 1.2.3-alpha.7.
