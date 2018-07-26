@@ -80,3 +80,28 @@ https://docs.npmjs.com/misc/semver#prerelease-tags
 
 semver.js source code: 
 https://github.com/npm/node-semver/blob/v5.5.0/semver.js#L1121
+
+## how to get the latest pre-release verions? 
+
+dist-tag: https://docs.npmjs.com/cli/dist-tag
+```
+Publishing a package sets the latest tag to the published version unless the --tag option is used. For example, npm publish --tag=beta.
+
+By default, npm install <pkg> (without any @<version> or @<tag> specifier) installs the latest tag.
+```
+
+so, to release a new pre-release version:
+
+```
+npm publish --tag next
+```
+
+to use the latest pre-release verion:
+```
+npm install <package>@next
+```
+
+to verify:
+```
+npm dist-tag ls -a <package>
+```
