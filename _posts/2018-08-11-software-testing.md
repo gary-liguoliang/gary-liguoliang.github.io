@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Software Testing Foundations Notes"
+title:  "'Software Testing Foundations' Notes"
 date:  2018-08-11 23:00:00 +0800
 categories: qa
 tags:
