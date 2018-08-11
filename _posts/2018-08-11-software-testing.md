@@ -62,7 +62,7 @@ the following data should be recorded:
  - No failures means the system is useful is a fallacy.
  
  
- ## Test Plan
+## Test Plan
  The test manager might participate in the following planning activities:
   - defininingthe overall approach to and strategy for testing
   - deciding about the test environment and test auotomation
@@ -73,14 +73,14 @@ the following data should be recorded:
   - writing the test plan and deciding on what, who, when and how much testing
   - estimating test effor and test cost.
     
-  ### Test Entry and Exit Criteria
-  typial entry criteria:
+### Test Entry and Exit Criteria
+  *typial entry criteria:*
    - the test environment is ready
    - the test tools are ready for use in the test environment
    - test objects are installed in the test environment
    - the necessary test data is available
    
-  exit:
+  *exit:*
    - achieved test coverage: tests run, covered requirements, code coverage etc.
    - product quality: defect density, defect severity, failure rate and reliability of the test object
    - residual risk: tests not executed, defects not repaired, incomplete coverage of requirements or code. ect.
