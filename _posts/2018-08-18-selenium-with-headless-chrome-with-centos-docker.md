@@ -9,7 +9,7 @@ tags:
  - docker 
 ---
 
-As an engineer, I want to test my web app with Chrome in a Jenkins cluster. Chrome is not available in my of my 
+As an engineer, I want to test my web app with Chrome in a Jenkins cluster. Chrome is not available in most of 
 Jenkins build nodes, but docker is.
 
 ## build image
@@ -47,7 +47,7 @@ COPY selenium-with-headless-chrome.py .
 RUN python selenium-with-headless-chrome.py
 ```
 
-## execute Selenium from python
+## execute selenium from python
 
 ```python
 from selenium import webdriver
@@ -65,7 +65,7 @@ driver.get("http://python.org")
 print "page title: %s" % driver.title
 ```
 
-## Docker image & source code
+## docker image & source code
 
 * docker image: https://hub.docker.com/r/guoliangli/selenium-with-headless-chrome-centos/ 
 * source: https://github.com/guoliang-dev/docker-selenium-with-headless-chrome-centos
