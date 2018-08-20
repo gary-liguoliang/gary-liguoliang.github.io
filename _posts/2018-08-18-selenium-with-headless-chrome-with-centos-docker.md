@@ -89,4 +89,6 @@ add arguments:
  "--no-sandbox",
  "--disable-dev-shm-usage"
 ```
-for more details: https://github.com/timgrossmann/InstaPy/issues/2362
+for more details: 
+* https://github.com/timgrossmann/InstaPy/issues/2362
+* https://github.com/karma-runner/karma-chrome-launcher/issues/158
