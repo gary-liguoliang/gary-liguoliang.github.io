@@ -69,3 +69,24 @@ print "page title: %s" % driver.title
 
 * docker image: https://hub.docker.com/r/guoliangli/selenium-with-headless-chrome-centos/ 
 * source: https://github.com/guoliang-dev/docker-selenium-with-headless-chrome-centos
+
+
+## troubleshootings
+
+### Public key for google-chrome-unstable-x.rpm is not installed
+
+solution: import google key e.g.
+```
+rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+```
+for more detials: https://www.google.com/linuxrepositories/
+
+### ERROR Message: unknown error: DevToolsActivePort file doesn't exist
+
+add arguments: 
+```
+ "--headless",
+ "--no-sandbox",
+ "--disable-dev-shm-usage"
+```
+for more details: https://github.com/timgrossmann/InstaPy/issues/2362
