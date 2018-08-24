@@ -9,6 +9,8 @@ tags:
  - mac
 ---
 
+# Java
+
 ## installing jdk
 
 download and install jdk from: 
@@ -52,13 +54,21 @@ Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
 Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
 ```
 
-## configuring java_home
+## config java_home
 
 according to `man java_home`:
 set java_home in `~/.bash_profile`:
 ```bash
 export JAVA_HOME=`/usr/libexec/java_home`
 ```
+
+## check with java is in use actaully
+
+```bash
+ls -al /usr/bin/java
+```
+
+# Maven
 
 ## installing / configuring maven
 
