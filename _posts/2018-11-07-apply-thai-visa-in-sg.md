@@ -18,7 +18,7 @@ tags:
  - 其他人可以代领护照
 
 时间表: 
- - 04-11-2018 23:38:54 visaonline提交资料
- - 05-11-2018 傍晚, visaonline状态改为"reviewed", 提示可以在Nov 6/7去交资料(打印并签名的申请表*2 + 机票等辅助资料复印件*1)
+ - 04-11-2018 23:38:54 visaonline提交资料: 照片(手机拍的) + 护照首页照片 + 机票 + LTPV正反面 + 银行对账单
+ - 05-11-2018 傍晚, visaonline状态改为"reviewed", 提示可以在Nov 6/7去交资料(打印并签名的申请表x2 + 机票等辅助资料复印件x1)
  - 06-11-2018 新加坡假期 放假
  - 07-11-2018 现场提交资料 + 护照, 被告知"collect passort with the receipt tomorrow afternoon 2pm - 3pm" 下午visaonline状态改为"to collect passport"
