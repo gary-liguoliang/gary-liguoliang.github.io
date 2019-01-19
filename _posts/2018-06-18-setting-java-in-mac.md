@@ -68,6 +68,16 @@ export JAVA_HOME=`/usr/libexec/java_home`
 ls -al /usr/bin/java
 ```
 
+## removing java
+
+```
+cd /Library/Java/JavaVirtualMachines
+sudo rm -rf jdk-10.0.2.jdk
+
+# verify
+/usr/libexec/java_home -V
+```
+
 # Maven
 
 ## installing / configuring maven
