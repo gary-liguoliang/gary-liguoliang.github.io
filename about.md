@@ -6,7 +6,7 @@ title: About
 
 # About me
 
- - Passionate developer well versed in Core Java/Spring, Python, JavaScript/jQuery with experience in Android, Kotlin and Groovy
+ - Passionate developer well versed in CoreJava/Spring, Python with experience in JavaScript/jQuery, Android, Kotlin and Groovy
  - Working as developer in global Agile teams since 2007
  - Agile practitioner of Scrum, Kanban, TDD, BDD, DevOps
 
