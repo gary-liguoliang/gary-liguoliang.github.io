@@ -36,3 +36,5 @@ disqus:
   shortname: liguoliang-com
 
 google_analytics: UA-71253977-1
+
+paginate: 10
