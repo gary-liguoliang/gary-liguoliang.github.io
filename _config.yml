@@ -38,7 +38,4 @@ disqus:
 
 google_analytics: UA-71253977-1
 
-paginate: 10
-# paginate_path: "/page:num/"
-# pagination:
-#   enabled: true
+paginate: 5
