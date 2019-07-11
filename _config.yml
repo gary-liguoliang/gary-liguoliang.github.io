@@ -25,8 +25,9 @@ github_username:  guoliang-dev
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -38,4 +39,6 @@ disqus:
 google_analytics: UA-71253977-1
 
 paginate: 10
-paginate_path: "/page:num/"
+# paginate_path: "/page:num/"
+# pagination:
+#   enabled: true
