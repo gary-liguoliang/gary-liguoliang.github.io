@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How does poor application change my career path in the last few years"
+title:  "How Does Poor Application Change My Career Path in the Last Few Years"
 date:  20190710 21:43:47 +0800
 categories: default
 tags:
