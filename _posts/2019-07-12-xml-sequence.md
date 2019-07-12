@@ -22,7 +22,7 @@ the payment gateway returns:
 <result>
     <status>success</status>
 </result>
-
+```
 it works fine when I test it with my HTTP client.
 
 *by the WSDL shared by the payment gateway, `fromAccount` and `amount` must keep in `sequence`.*
