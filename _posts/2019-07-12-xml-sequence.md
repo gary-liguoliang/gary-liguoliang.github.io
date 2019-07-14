@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Does XML Sequence Matter? It Depends."
+title:  "Does Element Sequence Matter in XML? It Depends."
 date:  20190712 21:35:00 +0800
 categories: default
 tags:
