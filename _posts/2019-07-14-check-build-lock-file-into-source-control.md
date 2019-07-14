@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "Always Check Build Lock File into Source Control"
 date:  20190714 23:42:00 +0800
 categories: default
