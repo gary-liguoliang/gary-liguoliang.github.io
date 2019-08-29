@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title:  "Lessons Learned from Take-Home-Projects in Job Interviews"
 date:  20190829 12:40:18 +0800
@@ -9,9 +9,9 @@ tags:
  - take-home-project
 ---
 
-Consider a take-home-project an opportunity to demonstrate your design and coding skills. writing a`Factory` to produce intances is much better than answering 'can you tell me one design pattern that you used?'
+Consider a take-home-project an opportunity to demonstrate your design and coding skills. writing a`Factory` to produce intances is much more interesting than answering 'can you tell me one design pattern that you used?'
 
-## prepare a seed/template project to save time
+## Prepare a seed/template project to save time
 
 e.g. https://github.com/guoliang-dev/java8-maven-seed-project:
  - a default pom.xml with dependencies(e.g. junit) and plugins(e.g. jaccoco)
@@ -19,12 +19,12 @@ e.g. https://github.com/guoliang-dev/java8-maven-seed-project:
  - a default readme
 
 
-## put your solution into a remote *private* repo and setup build pipeline
+## Put your solution into a remote *private* repo and setup build pipeline
 
 such as github/bitbuket, make sure it's a *private* one and build pipeline is enabled. both github and bitbuket are offering certain free minutes for *private* repo build.
 
 
-## prepare a readme.md
+## Prepare a readme.md
 
 typically a readme file should contains:
  - your name, email and your github url
@@ -35,7 +35,7 @@ typically a readme file should contains:
  however, don't expect that interviewers will read all details carefully. 
 
 
-## add comments in your code
+## Add comments in your code
 
 this will help interviewers understand your code and also let them know that you're aware of poetnial issues. 
 
@@ -45,7 +45,7 @@ generally I'll try my best on naming, so that I dont need to add comments. hower
  - shortcut. e.g: // todo: use proper ThreadPool to handle MT
 
 
-## unit tests / intergration tests / end-to-end tests
+## Unit tests / intergration tests / end-to-end tests
 
 **always** write unit tests, even though it's not mentioned at all, ideally follow `TDD`.
  - tests help you verify your solution
@@ -60,7 +60,7 @@ you may required to have code review sessions with interviewers:
  - you might required to fix certain bugs or add features
 
 
-## coding in front of your interviewers
+## Coding during interview
 
 if you're requested to fix a bug or add an enhancement, make sure:
  - run all your tests before making any change
