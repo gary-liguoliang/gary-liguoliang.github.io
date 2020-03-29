@@ -2,7 +2,7 @@
 layout: post
 title:  "Working at a startup for 6 months"
 date:  20200322 22:40:18 +0800
-categories: deault 
+categories: default 
 tags:
  - lessons-learned
 ---

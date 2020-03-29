@@ -15,7 +15,7 @@ header = """
 layout: post
 title:  "%s"
 date:  %s +0800
-categories: deault 
+categories: default 
 tags:
  - blogging
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Time Series Analysis with Python"
 date:  20190719 23:32:44 +0800
-categories: deault 
+categories: default 
 tags:
  - python 
 ---

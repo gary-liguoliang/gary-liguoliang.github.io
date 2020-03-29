@@ -2,7 +2,7 @@
 layout: post
 title:  "在新加坡申请泰国旅游签证"
 date:  20181107 22:01:12 +0800
-categories: deault 
+categories: default 
 tags:
  - travel
 ---

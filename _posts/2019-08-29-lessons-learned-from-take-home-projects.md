@@ -2,7 +2,7 @@
 layout: post
 title:  "Lessons Learned from Take-Home-Projects in Job Interviews"
 date:  20190829 12:40:18 +0800
-categories: deault 
+categories: default 
 tags:
  - lessons-learned
  - job-interview

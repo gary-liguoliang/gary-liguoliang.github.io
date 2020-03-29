@@ -2,7 +2,7 @@
 layout: post
 title:  "Run Selenium with Headless Chrome in Docker(CentOS)"
 date:  20180818 17:10:35 +0800
-categories: deault 
+categories: default 
 tags:
  - selenium
  - headless-chrome

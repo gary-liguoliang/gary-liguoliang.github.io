@@ -2,7 +2,7 @@
 layout: post
 title:  "Java String.intern() and String Pooling"
 date:  20190714 17:09:11 +0800
-categories: deault 
+categories: default 
 tags:
  - java 
 ---

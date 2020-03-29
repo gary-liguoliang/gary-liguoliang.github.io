@@ -2,7 +2,7 @@
 layout: post
 title:  "Orika with Spring-boot Devtools MappingException/ClassCastException: Mapper Cannot be Cast to GeneratedObjectBase"
 date:  20190716 22:16:50 +0800
-categories: deault 
+categories: default 
 tags:
  - java
  - spring
