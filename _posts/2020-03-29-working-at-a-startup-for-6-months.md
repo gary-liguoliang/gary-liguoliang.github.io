@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Working at a startup for 6 months"
-date:  20200322 22:40:18 +0800
+date:  20200329 17:37:18 +0800
 categories: default 
 tags:
  - lessons-learned
@@ -31,3 +31,10 @@ I don't really understand this when I first read it few years back, but now I do
 > We're small and we like it that way. It gives us the ability to turn on a dime, deliver projects quickly, and dedicate extraordinary attention to your assignment.
 > Our size allows us to work on projects we want to do rather than projects we have to do. Plus we can all fit in one cab if we squeeze.
 [https://37signals.com/05.html]
+
+## Do everything and get the job done
+
+In my previous job, I and one of my teammates acted as the "DevOps" team for one year, there's a big gap from code and functionally product, and nobody wants to get hands dirty to fix the gap. we decided to do everything required to deliver the code to a product, without writing much code for the product. we handle many tasks from managing stakeholder's expectations, involved in system design (we gave up soon because of manager-driven design), code review, quality control, deployment, production support.
+
+the mindset is different here, we don't have dedicated team to help you on database, messaging queue, network etc.  so in 6 months, I picked python and Django, got my hands dirty with Google cloud, delivered few features, and of course, fixed bugs created by myself. 
+
