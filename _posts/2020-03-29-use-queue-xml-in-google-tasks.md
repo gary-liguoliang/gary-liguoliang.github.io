@@ -10,7 +10,7 @@ tags:
 
 
 We got a service that has an HTTP request rate limit: less than 1 message per 10 seconds. we don't use this service frequently,
-but when we use it, we send two requests sequentially, then we got `http 409`. 
+but when we use it, we send two requests sequentially, as expected, we recevied few `http 429`. 
 
 we want to use Google Tasks to control the rate. 
 
@@ -43,9 +43,9 @@ set bucket_size to 1 using `queue.yaml`, task queue log shows tasks are dispatc
 
 **That's not all**,  you'd better to read this one before using queues.xml:
 
-https://cloud.google.com/tasks/docs/queue-yaml#pitfalls
+[Pitfalls of mixing queue.yaml and gcloud command](https://cloud.google.com/tasks/docs/queue-yaml#pitfalls)
 
 and these posts also help:
 
-https://stackoverflow.com/questions/3740835/what-is-meant-by-bucket-size-of-queue-in-the-google-app-engine/3740846#3740846
-https://issuetracker.google.com/issues/138813037
+- https://stackoverflow.com/questions/3740835/what-is-meant-by-bucket-size-of-queue-in-the-google-app-engine/3740846#3740846
+- [a feature request:  Make Max Burst Size configurable](https://issuetracker.google.com/issues/138813037)
