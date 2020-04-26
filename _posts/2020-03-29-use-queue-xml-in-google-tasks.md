@@ -10,9 +10,9 @@ tags:
 
 
 We got a service that has an HTTP request rate limit: less than 1 message per 10 seconds. we don't use this service frequently,
-but when we use it, we send two requests sequentially, as expected, we recevied few `http 429`. 
+but when we use it, we send two requests sequentially, as expected, we received few `http 429` errors. 
 
-we want to use Google Tasks to control the rate. 
+I kind of agree that it's my responsibility to control the rate, but I don't want to let my code aware of these constraints, so we decided to let Google Tasks control the rate. 
 
 **First try**
 
