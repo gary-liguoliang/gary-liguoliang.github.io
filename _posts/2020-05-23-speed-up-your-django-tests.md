@@ -31,4 +31,4 @@ However, slow tests generally indicate design issues. all the techniques mention
 
 *from: [Architecture Patterns with Python](https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/ch04.html#chapter_04_service_layer)*
 
-
+if we cloud fundamentally resolve some design issues, I believe we’ll get much fewer integration tests.
