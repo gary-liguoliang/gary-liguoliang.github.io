@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Server-side GraphQL Journey in Python"
+title:  "GraphQL Server-side Journey with Python"
 date:  20200905 10:19:00 +0800
 categories: default
 tags:
