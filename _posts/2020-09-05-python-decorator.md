@@ -7,8 +7,6 @@ tags:
  - Python
 ---
 
-## Python Decorators
-
 In my first few weeks with Python, I was shocked that I cloud pass a function around as a parameter, for example:
 
 ```python
