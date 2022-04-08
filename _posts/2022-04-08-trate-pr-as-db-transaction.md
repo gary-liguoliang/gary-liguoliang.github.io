@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pull requests should be treated as database translation: all kinds of changes should be included"
-date:  20220409 00:10:00 +0800
+date:  20220408 23:30:00 +0800
 categories: default
 tags:
  - Python
